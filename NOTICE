@@ -1,0 +1,11 @@
+Shellin Core
+Copyright (C) 2026 Joonhyung Cho
+
+Shellin Core is licensed to the public under AGPL-3.0-or-later.
+
+See LICENSE for the public license terms and COMMERCIAL_LICENSE.md for the
+copyright holder's separate commercial and internal licensing statement.
+
+This repository includes the English BIP-39 wordlist from the Bitcoin
+Improvement Proposals repository, licensed under MIT by BIP-0039. Shellin uses
+that list only for one-time login keys. See docs/wordlists.md.

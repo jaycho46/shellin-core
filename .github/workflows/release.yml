@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      contents: write
+    steps:
+      # actions/checkout@v5
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
+      # actions/setup-go@v6
+      - uses: actions/setup-go@4a3601121dd01d1626a1e23e37211e3254c1c06c
+        with:
+          go-version-file: go.mod
+      - name: Build archives
+        env:
+          SHELLIN_UPDATE_PUBLIC_KEY: ${{ secrets.SHELLIN_UPDATE_PUBLIC_KEY }}
+          SHELLIN_UPDATE_PRIVATE_KEY: ${{ secrets.SHELLIN_UPDATE_PRIVATE_KEY }}
+        run: ./scripts/build-cli-dist.sh dist
+      - name: Publish release
+        # softprops/action-gh-release@v3.0.0
+        uses: softprops/action-gh-release@b4309332981a82ec1c5618f44dd2e27cc8bfbfda
+        with:
+          files: |
+            dist/*

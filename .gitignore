@@ -1,0 +1,12 @@
+.DS_Store
+*.swp
+*.swo
+*.swo
+
+/dist/
+/output/
+/coverage.out
+
+*.pem
+.env
+.env.*
