@@ -1,13 +1,13 @@
 module github.com/jaycho46/shellin-core
 
-go 1.24.2
+go 1.25.0
 
 require (
 	github.com/creack/pty v1.1.24
 	github.com/google/uuid v1.6.0
 	github.com/gorilla/websocket v1.5.3
 	github.com/pion/webrtc/v4 v4.2.9
-	golang.org/x/term v0.40.0
+	golang.org/x/term v0.43.0
 )
 
 require (
@@ -27,8 +27,8 @@ require (
 	github.com/pion/transport/v4 v4.0.1 // indirect
 	github.com/pion/turn/v4 v4.1.4 // indirect
 	github.com/wlynxg/anet v0.0.5 // indirect
-	golang.org/x/crypto v0.48.0 // indirect
-	golang.org/x/net v0.50.0 // indirect
-	golang.org/x/sys v0.41.0 // indirect
+	golang.org/x/crypto v0.51.0 // indirect
+	golang.org/x/net v0.55.0 // indirect
+	golang.org/x/sys v0.45.0 // indirect
 	golang.org/x/time v0.10.0 // indirect
 )
